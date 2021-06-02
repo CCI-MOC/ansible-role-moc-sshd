@@ -35,4 +35,8 @@ AcceptEnv LC_PAPER LC_NAME LC_ADDRESS LC_TELEPHONE LC_MEASUREMENT
 AcceptEnv LC_IDENTIFICATION LC_ALL LANGUAGE
 AcceptEnv XMODIFIERS
 
+{% if ssh_local_config is defined %}
+{{ ssh_local_config }}
+{% endif %}
+
 Subsystem sftp  /usr/libexec/openssh/sftp-server
